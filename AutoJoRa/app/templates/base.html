@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>AutoJoRa Network Automation</title>
+	</head>
+	<body>
+		<div>
+			AutoJoRa:
+			<a href="{{ url_for('home') }}">Home</a>
+			<a href="{{ url_for('ssh') }}">Configuration</a>
+		</div>
+		{% for message in get_flashed_messages() %}
+		<h1>{{ message }}</h1>
+		{% endfor %}
+		<hr>
+		{% block content %}{% endblock %}
+	</body>
+</html>

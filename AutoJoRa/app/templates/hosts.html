@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<html>
+    <head>
+      <title>Welcome to AutoJoRa!</title>
+    </head>
+    <body>
+        <h3>INPUT IP ADDRESS & SSH AUTH OF DEVICES</h3>
+    	<form action="" method="post" novalidate>
+        	{{ form.hidden_tag() }}
+            <table>
+            <tr>
+            <th>
+        	<p>   
+                CISCO DEVICES <br>
+            	{{ form.ip1.label }}<br>
+            	{{ form.ip1(cols="50", rows="10") }}<br>
+        	</p>
+            <p>
+                {{ form.user1.label }} <br>
+                {{ form.user1 }} <br>
+                {{ form.pw1.label }} <br>
+                {{ form.pw1 }} <br>
+            </p>
+            </th>
+            <th>
+        	<p>
+                JUNIPER DEVICES <br>
+            	{{ form.ip2.label }}<br>
+            	{{ form.ip2(cols="50", rows="10") }}<br>
+        	</p>
+            <p>
+                {{ form.user2.label }} <br>
+                {{ form.user2 }} <br>
+                {{ form.pw2.label }} <br>
+                {{ form.pw2 }} <br>
+            </p>
+            </th>
+            </tr>
+            </table>
+        	<p>{{ form.submit() }}</p>
+        </form>
+    </body>
+</html>
+{% endblock %}
